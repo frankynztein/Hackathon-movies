@@ -18,17 +18,15 @@ const getSearchValue = (e) => {
   e.preventDefault();
   const movieValue = document.getElementById('movie-name').value;
   getJson('https://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69');
-  setTimeout(printCards, 300);
+  setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
   carouselImgs.classList.remove('hide')
   infoGeneral.classList.add('hide')
   mainPage.classList.add('hide')
-
 }
 
 const printCards = () => {
   arrData = Object.entries(infoMovies);
-
   arrMovies = arrData[0][1];
   console.log(arrMovies)
 
@@ -58,7 +56,6 @@ const printMainInfo = (element) => {
 
   arrMovies = arrData[0][1];
   const printName = element.querySelector('[name=\'movies\']');
-  // console.log(arrMovies)
 
   printName.addEventListener('click', () => {
     moviesCards.classList.add('hide');
