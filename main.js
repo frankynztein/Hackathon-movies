@@ -15,7 +15,7 @@ const carouselImgs = document.getElementById('carousel-imgs')
 const getSearchValue = (e) => {
   e.preventDefault();
   const movieValue = document.getElementById('movie-name').value;
-  getJson('http://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69');
+  getJson('https://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69');
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
   carouselImgs.classList.add('hide')
@@ -65,7 +65,7 @@ const printMainInfo = (element) => {
 
     infoGeneral.innerHTML = '';
     const atribId = printName.getAttribute('id');
-    getJson('http://www.omdbapi.com/?i=' + encodeURI(atribId) + '&apikey=c99c4c69')
+    getJson('https://www.omdbapi.com/?i=' + encodeURI(atribId) + '&apikey=c99c4c69')
     setTimeout(() => {
       console.log(infoMovies)
       let dataPerMovie = `
