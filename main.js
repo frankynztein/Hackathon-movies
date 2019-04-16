@@ -20,7 +20,7 @@ const getSearchValue = (e) => {
   getJson('https://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69');
   setTimeout(printCards, 300);
   moviesCards.classList.remove('hide')
-  carouselImgs.classList.add('hide')
+  carouselImgs.classList.remove('hide')
   infoGeneral.classList.add('hide')
   mainPage.classList.add('hide')
 
