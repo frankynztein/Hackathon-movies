@@ -1,0 +1,19 @@
+{
+  "name": "hackathon-movies",
+  "version": "1.0.0",
+  "description": "* [Preámbulo](#preámbulo)\r * [Resumen del proyecto](#resumen-del-proyecto)\r * [Consideraciones generales](#consideraciones-generales)\r * [Objetivos de aprendizaje](#objetivos-de-aprendizaje)\r * [Parte obligatoria](#parte-obligatoria)\r * [Consideraciones técnicas](#consideraciones-técnicas)",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kathmontalvo/Hackathon-movies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kathmontalvo/Hackathon-movies/issues"
+  },
+  "homepage": "https://github.com/kathmontalvo/Hackathon-movies#readme"
+}
