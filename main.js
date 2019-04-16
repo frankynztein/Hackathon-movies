@@ -12,6 +12,20 @@ const getJson = (datajson) => {
 const moviesCards = document.getElementById('movies-cards')
 const carouselImgs = document.getElementById('carousel-imgs')
 const mainPage = document.getElementById('main-page')
+const navBar = document.getElementById('nav-bar')
+const btnSearchBar = document.getElementById('btn-search-bar')
+
+const searchKeyword = (e) => {
+  e.preventDefault();
+  const movieKeyword = document.getElementById('btn-search-bar').value;
+  getJson('https://www.omdbapi.com/?s=' + encodeURI(movieKeyword) + '&apikey=c99c4c69');
+  setTimeout(printCards, 500);
+  moviesCards.classList.remove('hide')
+  carouselImgs.classList.remove('hide')
+  infoGeneral.classList.add('hide')
+  mainPage.classList.add('hide')
+  navBar.classList.remove('hide')
+}
 
 
 const getSearchValue = (e) => {
@@ -20,7 +34,7 @@ const getSearchValue = (e) => {
   getJson('https://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69');
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
-  carouselImgs.classList.remove('hide')
+  carouselImgs.classList.add('hide')
   infoGeneral.classList.add('hide')
   mainPage.classList.add('hide')
 }
@@ -86,6 +100,7 @@ const printMainInfo = (element) => {
   })
 }
 
+btnSearchBar.addEventListener('click', searchKeyword)
 searchMovie.addEventListener('click', getSearchValue)
 
 
