@@ -1,4 +1,3 @@
-const searchMovie = document.getElementById('search-movie');
 let infoMovies;
 
 const getJson = (datajson) => {
@@ -9,16 +8,19 @@ const getJson = (datajson) => {
     })
 };
 
+const searchMovie = document.getElementById('search-movie');
 const moviesCards = document.getElementById('movies-cards')
 const carouselImgs = document.getElementById('carousel-imgs')
 const mainPage = document.getElementById('main-page')
 const navBar = document.getElementById('nav-bar')
 const btnSearchBar = document.getElementById('btn-search-bar')
 
+let i = 1
+const movieKeyword = document.getElementById('keyword-value');
+
 const searchKeyword = (e) => {
   e.preventDefault();
-  const movieKeyword = document.getElementById('btn-search-bar').value;
-  getJson('https://www.omdbapi.com/?s=' + encodeURI(movieKeyword) + '&apikey=c99c4c69');
+  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i}&apikey=c99c4c69`);
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
   carouselImgs.classList.remove('hide')
@@ -27,11 +29,10 @@ const searchKeyword = (e) => {
   navBar.classList.remove('hide')
 }
 
-
 const getSearchValue = (e) => {
   e.preventDefault();
   const movieValue = document.getElementById('movie-name').value;
-  getJson('https://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69');
+  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieValue)}&page=${i + 1}&apikey=c99c4c69`);
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
   carouselImgs.classList.add('hide')
@@ -42,7 +43,6 @@ const getSearchValue = (e) => {
 const printCards = () => {
   arrData = Object.entries(infoMovies);
   arrMovies = arrData[0][1];
-  console.log(arrMovies)
 
   document.getElementById('output').innerHTML = '';
   arrMovies.forEach((movie) => {
@@ -52,13 +52,13 @@ const printCards = () => {
         <div class="card-body">
           <h5 class="card-title">${movie.Title}</h5>
         </div>
-        <div class="card-footer">
+        <div class="card-footer align-text-bottom">
           <small class="text-muted">Year: ${movie.Year}</small>
         </div>
       </div>`
     const div = document.createElement('div');
     div.innerHTML = string;
-    div.className = 'card my-2 col-12 col-sm-6 col-md-4';
+    div.className = 'card my-2 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3';
     document.getElementById('output').appendChild(div);
     printMainInfo(div);
   })
@@ -67,15 +67,12 @@ const printCards = () => {
 const infoGeneral = document.getElementById('info-general')
 const printMainInfo = (element) => {
   arrData = Object.entries(infoMovies);
-
   arrMovies = arrData[0][1];
   const printName = element.querySelector('[name=\'movies\']');
-
   printName.addEventListener('click', () => {
     moviesCards.classList.add('hide');
     carouselImgs.classList.add('hide');
     infoGeneral.classList.remove('hide');
-
     infoGeneral.innerHTML = '';
     const atribId = printName.getAttribute('id');
     getJson('https://www.omdbapi.com/?i=' + encodeURI(atribId) + '&apikey=c99c4c69')
@@ -103,37 +100,9 @@ const printMainInfo = (element) => {
 btnSearchBar.addEventListener('click', searchKeyword)
 searchMovie.addEventListener('click', getSearchValue)
 
-
-
-
-/*
-const getApi = () => {
-fetch('http://www.omdbapi.com/?i=tt3896198&apikey=c99c4c69')
-.then((res) => console.log(res.json()))
-.then((data) => {
-    let output = '<h2 class="mb-4">Posts</h2>';
-    data.forEach((movie) => {
-        output += `
-div class="card card-body mb-3" >
-  <h3>${movie.title}</h3>
-  <p>${movie.plot}</p>
-        / div >
-  `;
-    });
-    document.getElementById('output').innerHTML = output;
+const next = document.getElementById('next')
+next.addEventListener('click', (e) => {
+  e.preventDefault()
+  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69`);
+  setTimeout(printCards, 400);
 })
-
-.then((data) => {
-    let output = '<h2 class="mb-4">Posts</h2>';
-    data.forEach((posts) => {
-        output += `
-div class="card card-body mb-3" >
-  <h3>${posts.title}</h3>
-  <p>${posts.body}</p>
-        / div >
-  `;
-    });
-    document.getElementById('output').innerHTML = output;
-})
-}
-*/

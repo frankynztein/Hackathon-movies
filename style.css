@@ -16,25 +16,33 @@ nav {
     max-width: 100%;
     overflow: hidden;
 }
+
 .card img {
     max-height: 400px;
 }
-.hide{
-display:none !important
+
+.hide {
+    display: none !important
 }
 
 .container-height {
     height: 100vh;
 }
 
-@media (min-width: 576px) and (max-width:768px) {
+@media (min-width: 576px) {
     .card-deck .card {
-        flex: 45% !important
+        flex: 30% !important
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .card-deck .card {
-        flex: 30% !important
+        flex: 25% !important
+    }
+}
+
+@media (min-width: 992px) {
+    .card-deck .card {
+        flex: 20% !important
     }
 }

@@ -51,14 +51,15 @@
     </div>
   </nav>
   <!-- BACKGROUND IMAGE -->
-  <div id = "main-page" class="container-fluid container-bg container-height img-fluid">
-      <!-- SEARCHBAR -->
-      <div class="container d-flex justify-content-center align-middle container-height">
-          <form class="form-inline col-sm-10 d-flex justify-content-center">
-            <input class="form-control mr-sm-2 form-control-lg col-sm-9" type="text" placeholder="Keyword" aria-label="Search">
-            <button id= "btn-search-bar" class="btn btn-outline-light my-2 my-sm-0 btn-lg" type="submit">Search</button>
-          </form>
-        </div>
+  <div id="main-page" class="container-fluid container-bg container-height img-fluid">
+    <!-- SEARCHBAR -->
+    <div class="container d-flex justify-content-center align-middle container-height">
+      <form class="form-inline col-sm-10 d-flex justify-content-center">
+        <input id="keyword-value" class="form-control mr-sm-2 form-control-lg col-sm-9" type="text"
+          placeholder="Keyword" aria-label="Search">
+        <button id="btn-search-bar" class="btn btn-outline-light my-2 my-sm-0 btn-lg" type="submit">Search</button>
+      </form>
+    </div>
   </div>
   <!-- INICIO CARRUSEL DE MARVEL -->
   <div id="carousel-imgs" class="container-fluid hide">
@@ -94,7 +95,7 @@
     </div>
   </div>
   <!-- FIN CARRUSEL DE MARVEL -->
-  <div id="movies-cards"class="card text-center hide">
+  <div id="movies-cards" class="card text-center hide">
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
@@ -108,6 +109,16 @@
         </li>
       </ul>
     </div>
+    <nav aria-label="Page-navigation">
+      <ul class="pagination pagination-lg justify-content-center mt-5">
+        <li id="previous" class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li id="next" class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
     <div class="card-body">
       <div id="output" class="card-deck">
       </div>
