@@ -1,27 +1,45 @@
 const searchMovie = document.getElementById('search-movie');
-const output = document.getElementById('output');
 let infoMovies;
 
 const getJson = (datajson) => {
-    fetch(datajson)
-        .then((res) => res.json())
-        .then(data => {
-            infoMovies = data;
-            return infoMovies;
-        })
+  fetch(datajson)
+    .then((res) => res.json())
+    .then(data => {
+      infoMovies = data;
+      return infoMovies;
+    })
 };
 
 searchMovie.addEventListener('click', () => {
-    const movieValue = document.getElementById('movie-name').value;
-    getJson('http://www.omdbapi.com/?t=' + encodeURI(movieValue) + '&apikey=c99c4c69')
-    setTimeout(() => {
-        arrMovie = Object.entries(infoMovies);
-        let string = `<img src= ${infoMovies.Poster}>`
-        output.innerHTML = string;
+  const movieValue = document.getElementById('movie-name').value;
+  getJson('http://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69')
+  const printCards = () => {
+    abc = Object.entries(infoMovies);
+    arrMovies = abc[0][1]
+    console.log(arrMovies)
 
-        console.log(infoMovies);
-    }, 250)
+    arrMovies.forEach((movie) => {
+      console.log(movie)
+      let string =
+        ` <img class="card-img-top" src=${movie.Poster} alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">${movie.Title}</h5>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Year: ${movie.Year}</small>
+          </div>`
+      const div = document.createElement('div');
+      div.innerHTML = string;
+      div.className = 'card';
+      document.getElementById('output').appendChild(div);
+      printMainInfo(div);
+    })
+  }
+  setTimeout(printCards, 500)
 })
+const printMainInfo = (element) => {
+
+}
 
 
 

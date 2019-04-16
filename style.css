@@ -1,0 +1,20 @@
+.carousel-item img {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.card img {
+    height: 470px;
+}
+
+@media (min-width: 576px) and (max-width:768px) {
+    .card-deck .card {
+        flex: 45% !important
+    }
+}
+
+@media (min-width: 769px) {
+    .card-deck .card {
+        flex: 30% !important
+    }
+}
