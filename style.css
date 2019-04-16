@@ -3,6 +3,15 @@
     font-weight: lighter;
 }
 
+nav {
+    /* background: 0 0 !important; */
+    background-color: transparent !important
+}
+
+.container-bg {
+    background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/netflix-background-9.jpg");
+}
+
 .carousel-item img {
     max-width: 100%;
     overflow: hidden;
@@ -12,6 +21,10 @@
 }
 .hide{
 display:none !important
+}
+
+.container-height {
+    height: 100vh;
 }
 
 @media (min-width: 576px) and (max-width:768px) {

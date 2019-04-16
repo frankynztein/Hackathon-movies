@@ -11,16 +11,18 @@ const getJson = (datajson) => {
 
 const moviesCards = document.getElementById('movies-cards')
 const carouselImgs = document.getElementById('carousel-imgs')
+const mainPage = document.getElementById('main-page')
+
 
 const getSearchValue = (e) => {
   e.preventDefault();
   const movieValue = document.getElementById('movie-name').value;
   getJson('https://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69');
-  setTimeout(printCards, 500);
+  setTimeout(printCards, 300);
   moviesCards.classList.remove('hide')
-  carouselImgs.classList.add('hide')
+  carouselImgs.classList.remove('hide')
   infoGeneral.classList.add('hide')
-
+  mainPage.classList.add('hide')
 
 }
 

@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
 </head>
 
 <body>
@@ -24,7 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -47,11 +46,22 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input id="movie-name" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button id="search-movie" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button id="search-movie" class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
-  <div id="carousel-imgs" class="container-fluid">
+  <!-- BACKGROUND IMAGE -->
+  <div id = "main-page" class="container-fluid container-bg container-height img-fluid">
+      <!-- SEARCHBAR -->
+      <div class="container d-flex justify-content-center align-middle container-height">
+          <form class="form-inline col-sm-10 d-flex justify-content-center">
+            <input class="form-control mr-sm-2 form-control-lg col-sm-9" type="text" placeholder="Keyword" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0 btn-lg" type="submit">Search</button>
+          </form>
+        </div>
+  </div>
+  <!-- INICIO CARRUSEL DE MARVEL -->
+  <div id="carousel-imgs" class="container-fluid hide">
     <div class="row">
       <div class="col-sm-12 px-0">
         <div id="slide1" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -83,6 +93,7 @@
       </div>
     </div>
   </div>
+  <!-- FIN CARRUSEL DE MARVEL -->
   <div id="movies-cards"class="card text-center hide">
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
@@ -102,8 +113,11 @@
       </div>
     </div>
   </div>
-  <div id="info-general" class="container-fluid py-5">
+  <div id="info-general" class="container-fluid py-5 hide">
   </div>
+  <footer>
+    Una nueva película todos los días.
+  </footer>
 
   <!-- <script src="js/bootstrap.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -117,9 +131,6 @@
     crossorigin="anonymous"></script>
 
   <script src="main.js"></script>
-  <footer>
-    <p>Searchbar</p>
-  </footer>
 </body>
 
 </html>
