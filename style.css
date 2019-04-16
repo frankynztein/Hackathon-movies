@@ -1,9 +1,14 @@
+* {
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+}
+
 .carousel-item img {
     max-width: 100%;
     overflow: hidden;
 }
 .card img {
-    height: 470px;
+    max-height: 400px;
 }
 .hide{
 display:none !important

@@ -12,12 +12,15 @@ const getJson = (datajson) => {
 const moviesCards = document.getElementById('movies-cards')
 const carouselImgs = document.getElementById('carousel-imgs')
 
-const getSearchValue = () => {
+const getSearchValue = (e) => {
+  e.preventDefault();
   const movieValue = document.getElementById('movie-name').value;
   getJson('http://www.omdbapi.com/?s=' + encodeURI(movieValue) + '&apikey=c99c4c69');
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
   carouselImgs.classList.add('hide')
+  infoGeneral.classList.add('hide')
+
 
 }
 
@@ -58,6 +61,8 @@ const printMainInfo = (element) => {
   printName.addEventListener('click', () => {
     moviesCards.classList.add('hide');
     carouselImgs.classList.add('hide');
+    infoGeneral.classList.remove('hide');
+
     infoGeneral.innerHTML = '';
     const atribId = printName.getAttribute('id');
     getJson('http://www.omdbapi.com/?i=' + encodeURI(atribId) + '&apikey=c99c4c69')
