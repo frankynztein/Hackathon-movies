@@ -30,9 +30,9 @@ const searchKeyword = (e) => {
 }
 
 const movieValue = document.getElementById('movie-name');
-
 const getSearchValue = (e) => {
   e.preventDefault();
+  movieValue.value = movieKeyword.value
   getJson(`https://www.omdbapi.com/?s=${encodeURI(movieValue.value)}&page=${i + 1}&apikey=c99c4c69`);
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')

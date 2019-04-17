@@ -14,7 +14,7 @@
 
 <body>
   <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark bg-dark hide">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><img class="mini-logo"src="assets/logo.png" alt="logo mini"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -22,26 +22,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Movies</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" href="#">Contact us</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -53,18 +38,23 @@
   <!-- BACKGROUND IMAGE -->
   <div id="main-page" class="container-fluid container-bg container-height img-fluid">
     <!-- SEARCHBAR -->
-    <h2 class="text-center logo-nombre">Y tú que quieres ver .com</h2>
-    <div class="container d-flex justify-content-center align-middle container-height">
-      <form class="form-inline col-sm-10 d-flex justify-content-center">
-        <input id="keyword-value" class="form-control mr-sm-2 form-control-lg col-sm-9" type="text"
-          placeholder="Keyword" aria-label="Search">
-        <button id="btn-search-bar" class="btn btn-outline-light my-2 my-sm-0 btn-lg" type="submit">Search</button>
+    <div class="text-center logo-name my-5">
+      <img class="img-logo" src="assets/logo-big.png" alt="logo image">
+    </div>
+    <div class="container-fluid d-flex justify-content-center align-middle container-height col-sm-12">
+      <form class="form-inline col-sm-12 d-flex justify-content-center form-height">
+          <div class="row justify-content-center width-total py-5">
+              <input id="keyword-value" class="form-control mr-sm-2 form-control-lg col-sm-9" type="text"
+              placeholder="Keyword" aria-label="Search">
+            <button id="btn-search-bar" class="btn btn-outline-light my-2 my-sm-0 btn-lg" type="submit">Search</button>
+            </div>
+            <h4 class="white-color">Tendencias:</h4>
+            <div class="row width-total d-flex justify-content-center">
+          <button class="btn btn-primary" type="button">Marvel</button>
+          <button class="btn btn-primary mx-2" type="button">G.O.T.</button>
+          <button class="btn btn-primary" type="button">Toy Story</button>
+        </div>
       </form>
-      <div class="container-fluid">
-        <button class="btn btn-primary" type="button">Button</button>
-        <button class="btn btn-primary" type="button">Button</button>
-        <button class="btn btn-primary" type="button">Button</button>
-      </div>
     </div>
   </div>
   <!-- INICIO CARRUSEL DE MARVEL -->
