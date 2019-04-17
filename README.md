@@ -16,12 +16,15 @@
 
 ## Investigación
 
-* Se envió un google form [link](https://docs.google.com/forms/d/e/1FAIpQLScuh5TgkjuZIjeAN6-vrSJirZKKlbMVXGOXS68DT7-88Uh1Ow/viewform) a una muestra de 19 personas de personas y se obtuvieron los siguientes insights:
+* Se envió un google form [link](https://docs.google.com/forms/d/e/1FAIpQLScuh5TgkjuZIjeAN6-vrSJirZKKlbMVXGOXS68DT7-88Uh1Ow/viewform) a una muestra de 19 personas  y se obtuvieron los siguientes insights:
  * Al 100% de encuestados alguna vez han sentido la incertidumbre de no tener una elección de película, al 63% de manera muy seguida 
+
  ![image](https://user-images.githubusercontent.com/47748753/56270171-22c50980-60bb-11e9-8e26-46ba5caacd40.png)
  * El 58% confía más em opiniones de usuarios, que en puntuaciones y/o galardones
+
   ![image](https://user-images.githubusercontent.com/47748753/56270386-9bc46100-60bb-11e9-9b36-e60fe383cc59.png)
 * El 52.6% pide sugerencias para ver películas
+
 ![image](https://user-images.githubusercontent.com/47748753/56270509-efcf4580-60bb-11e9-9469-fb732ade1b61.png)
 
 En base a estos resultados, podríamos ser una fuenta de consulta necesaria previa  a la elección de una película o serie.
@@ -47,6 +50,10 @@ Con las ideas iniciales se diseño los siguientes prototipos:
 ![Desktop 2](https://user-images.githubusercontent.com/47748753/56271480-345be080-60be-11e9-933d-4fa63c13432a.png)
 ![Desktop 1](https://user-images.githubusercontent.com/47748753/56271483-358d0d80-60be-11e9-98f2-c8d61c93dc2c.png)
  
+ ### Logo
+ Se pensó en un logo con una frase familiar que haga sentir a la persona en confianza:
+![WhatsApp Image 2019-04-16 at 8 04 57 PM (1)](https://user-images.githubusercontent.com/47748753/56282230-43e62400-60d4-11e9-9167-7d232c73db40.jpeg)
+
 
 ## Testeos de Usabilidad 
 ### Primer testeo de Usabilidad
