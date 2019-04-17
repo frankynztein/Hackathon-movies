@@ -174,7 +174,8 @@ location.reload();
 })
  const pageMovies = document.getElementById('page-movies');
 
- pageMovies.addEventListener('click', () => {
+ pageMovies.addEventListener('click', (e) => {
+   e.preventDefault();
   moviesCards.classList.remove('hide');
   infoGeneral.classList.remove('hide');
   infoMovies.classList.add('hide');
