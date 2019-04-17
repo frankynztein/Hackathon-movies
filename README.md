@@ -13,7 +13,9 @@
  ***
 
 ## Resumen del proyecto
-"Y ahora que ver. com" es un website dirigido al momento excato en el que nuestro usuario tiene la incertidumbre de no saber que ver,recurre a la páginas recibe surgerencias en base a tendencias y palabras claves que el usuario elija, simulando un algoritmo de recomendaciones en base a preferencias. 
+A todos nos ha pasado, que tenemos un domingo por la tarde libre, queremos ver una peli, pero no se nos ocurre cual ver.
+Buscamos en redes, post de películas para ver comentarios y opiniones para decidir si ver la peli valdrá nuestro tiempo.
+Por eso nació Y AHORA QUE VER. COM, el espacio perfecto para recibir recomendaciones de tendencias a nivel mundial, una comunidad de cinéfilos comentando sus impresiones  sobre las últimas películas, puntuaciones y el resumen de la película, ya tienes toda la información en un solo lugar ahora decidir ya no es problema.
 
 ## Investigación
 
