@@ -14,6 +14,9 @@ const carouselImgs = document.getElementById('carousel-imgs')
 const mainPage = document.getElementById('main-page')
 const navBar = document.getElementById('nav-bar')
 const btnSearchBar = document.getElementById('btn-search-bar')
+const btnMarvel = document.getElementById('btn-marvel');
+const btnGot = document.getElementById('btn-got');
+const btnToyStory = document.getElementById('btn-toy-story');
 
 let i = 1
 const movieKeyword = document.getElementById('keyword-value');
@@ -50,7 +53,7 @@ const printCards = () => {
     console.log(movie)
     let abc = 'assets/no-image.jpeg'
     let xyz = movie.Poster
-    if(xyz == 'N/A'){
+    if(xyz === 'N/A'){
       return xyz = abc
     };
     let string =
@@ -104,12 +107,48 @@ const printMainInfo = (element) => {
   })
 }
 
+btnMarvel.addEventListener('click', (e) => {
+    e.preventDefault();
+    getJson('https://www.omdbapi.com/?s=marvel&page=${i++}&apikey=c99c4c69');
+    setTimeout(printCards, 1000);
+    moviesCards.classList.remove('hide')
+    carouselImgs.classList.add('hide')
+    infoGeneral.classList.add('hide')
+    mainPage.classList.add('hide')
+    navBar.classList.remove('hide')
+
+});
+
+btnGot.addEventListener('click', (e) => {
+  e.preventDefault();
+  getJson('https://www.omdbapi.com/?s=game-of-thrones&page=${i++}&apikey=c99c4c69');
+  setTimeout(printCards, 1000);
+  moviesCards.classList.remove('hide')
+  carouselImgs.classList.add('hide')
+  infoGeneral.classList.add('hide')
+  mainPage.classList.add('hide')
+  navBar.classList.remove('hide')
+
+});
+
+btnToyStory.addEventListener('click', (e) => {
+  e.preventDefault();
+  getJson('https://www.omdbapi.com/?s=toy-story&page=${i++}&apikey=c99c4c69');
+  setTimeout(printCards, 1000);
+  moviesCards.classList.remove('hide')
+  carouselImgs.classList.add('hide')
+  infoGeneral.classList.add('hide')
+  mainPage.classList.add('hide')
+  navBar.classList.remove('hide')
+
+});
+
 btnSearchBar.addEventListener('click', searchKeyword)
 searchMovie.addEventListener('click', getSearchValue)
 
 const next = document.getElementById('next')
 next.addEventListener('click', (e) => {
   e.preventDefault()
-  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69`);
+  getJson('https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69');
   setTimeout(printCards, 500);
 })
