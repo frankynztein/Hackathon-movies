@@ -1,5 +1,4 @@
 let infoMovies;
-
 const getJson = (datajson) => {
   fetch(datajson)
     .then((res) => res.json())
@@ -19,9 +18,8 @@ const btnGot = document.getElementById('btn-got');
 const btnToyStory = document.getElementById('btn-toy-story');
 const commmentsSection = document.getElementById('comments-section');
 const sendCommentBtn = document.getElementById('send-comment-btn');
-
-let i = 1
 const movieKeyword = document.getElementById('keyword-value');
+let i = 1
 
 const searchKeyword = (e) => {
   e.preventDefault();
@@ -49,7 +47,6 @@ const printCards = () => {
 
   document.getElementById('output').innerHTML = '';
   arrMovies.forEach((movie) => {
-    console.log(movie)
     let abc = 'assets/no-image.jpeg'
     let xyz = movie.Poster
     if (xyz === 'N/A') {
@@ -81,13 +78,14 @@ const printMainInfo = (element) => {
   printName.addEventListener('click', () => {
     moviesCards.classList.add('hide');
     carouselImgs.classList.add('hide');
+    carouselImgsGot.classList.add('hide');
+    carouselImgsToy.classList.add('hide');
     commmentsSection.classList.remove('hide');
     infoGeneral.classList.remove('hide');
     infoGeneral.innerHTML = '';
     const atribId = printName.getAttribute('id');
     getJson('https://www.omdbapi.com/?i=' + encodeURI(atribId) + '&apikey=c99c4c69')
     setTimeout(() => {
-      console.log(infoMovies)
       let dataPerMovie = `
         <div class="row">
           <div class="col text-center">
@@ -159,20 +157,18 @@ const next = document.getElementById('next')
 const previous = document.getElementById('previous')
 
 const nextPage = () => {
-  console.log(i)
     getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69`);
     setTimeout(printCards, 500)
 }
 const prevPage = () => {
-  console.log(i)
   if (i > 1) {
     getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i--}&apikey=c99c4c69`);
     setTimeout(printCards, 500);
   }
 };
+
 next.addEventListener('click', nextPage)
 previous.addEventListener('click', prevPage)
-
 document.getElementById('mini-logo').addEventListener('click', ()=>{
 location.reload();
 })
