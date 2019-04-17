@@ -1,96 +1,101 @@
-# Hackathon películas
+# Hackathon películas: Y ahora que ver.com
 
 ## Índice
 
-* [Preámbulo](#preámbulo)
-* [Resumen del proyecto](#resumen-del-proyecto)
-* [Consideraciones generales](#consideraciones-generales)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
-* [Parte obligatoria](#parte-obligatoria)
-* [Consideraciones técnicas](#consideraciones-técnicas)
+* [Resumen del Proyecto](#Resumen)
+* [Investigación](#Investigación)
+* [Historias de Usuario](#Historias-de-Usuario)
+* [Diseño de Interfaz de Usuario](#Diseño-de-Interfaz-de-Usuario)
+* [Testeos de Usabilidad](#Testeos-de-usabilidad)
+* [Organización de Equipo](#Organización-de-equipo)
+* [Conclusiones](#Conclusiones)
 
  ***
 
-## Preámbulo
-
-Con la aparición de plataformas para ver películas en la nube, como Netflix o
-Hulu, ver películas desde donde estés, comiendo lo que quieras
-(sin tener que pagar precios ridículos por pop-corn / pipoca / palomitas /
-canchita / cabritas), parando si es necesario, teniendo acceso a una cantidad
-abrumadora de películas... ha cambiado la experiencia del usuario
-y modificado el mercado de las películas a nivel global.
-
- ![Pelis](https://media.giphy.com/media/NipFetnQOuKhW/giphy.gif)
-
 ## Resumen del proyecto
+"Y ahora que ver. com" es un website dirigido al momento excato en el que nuestro usuario tiene la incertidumbre de no saber que ver,recurre a la páginas recibe surgerencias en base a tendencias y palabras claves que el usuario elija, simulando un algoritmo de recomendaciones en base a preferencias. 
 
-Durante estos días crearás el producto que tú quieras alrededor del mundo
-de las películas. Puede ser un sitio que hable de las mejores películas
-latinoamericanas, uno que recomiende las películas recién estrenadas en Netflix,
-uno de pelis de terror... o... ¡lo que quieras!
+## Investigación
 
-## Consideraciones generales
+* Se envió un google form [link](https://docs.google.com/forms/d/e/1FAIpQLScuh5TgkjuZIjeAN6-vrSJirZKKlbMVXGOXS68DT7-88Uh1Ow/viewform) a una muestra de 19 personas  y se obtuvieron los siguientes insights:
+ * Al 100% de encuestados alguna vez han sentido la incertidumbre de no tener una elección de película, al 63% de manera muy seguida 
 
-* Este proyecto se debe resolver en equipos de hasta 4 personas.
-* Usa la API de [OMDB](http://www.omdbapi.com/) (The Open Movie Database).
-* Tiempo para completar el reto: 3 días.
-* Habrán dos presentaciones, una a la mitad de la _hackathon_ y otra al final.
+ ![image](https://user-images.githubusercontent.com/47748753/56270171-22c50980-60bb-11e9-8e26-46ba5caacd40.png)
+ * El 58% confía más em opiniones de usuarios, que en puntuaciones y/o galardones
 
-## Objetivos de aprendizaje
+  ![image](https://user-images.githubusercontent.com/47748753/56270386-9bc46100-60bb-11e9-9b36-e60fe383cc59.png)
+* El 52.6% pide sugerencias para ver películas
 
-* Enfrentarte a un reto de corta duración en el que pongas en práctica todo
-lo aprendido hasta ahora.
-* Que sigas desarrollando tus habilidades de trabajo en equipo. Mientras más
-personas en un equipo de trabajo, mayor complejidad para: tener un entendimiento
-común, seguir el flujo de trabajo, buscar consensos, etc.
+![image](https://user-images.githubusercontent.com/47748753/56270509-efcf4580-60bb-11e9-9469-fb732ade1b61.png)
 
-## Parte Obligatoria
+En base a estos resultados, podríamos ser una fuenta de consulta necesaria previa  a la elección de una película o serie.
 
-* Todo el planeamiento del trabajo deberá ser detallado en un repositorio único
-por _squad_ en el que se presente el _planning_, el _research_, los _sketches_
-y las inspiraciones utilizadas para definir el producto.
-* Además, deberás detallar en el archivo _readme_, qué hizo cada una en el
-proyecto.
-* El producto deberá presentarse publicado en github pages.
+## Historias de Usuario
 
-## Consideraciones técnicas
+### User persona:
+### Primera Historia de Usuario:
+Yo como usuario quiero buscar películas por nombre, para conocer la principal información de forma amigable.
+### Segunda Historia de Usuario:
+Yo como usuario estoy aburrido un domingo por la tarde y quiero que me recomienden películas con buenos puntajes de calificación para distraerme.
+### Tercer Historia de Usuario:
+Yo como usuario que no sigue tendencias quiero que me recomienden peliculas que tengan muchos premios y nominaciones para saber que ver una tarde de ocio.
+### Cuarta Historia de Usuario:
+Yo como usuario quiero que me recomienden peliculas de a cuerdo a mis intéres, como género y palabras claves ejem: ( familia, amor, amistad, reto, team) para descubrir nuevas películas.
+## Diseño de Interfaz de Usuario
 
-* El diseño visual de los componentes es de libre elección de las estudiantes,
-sin embargo, si no quieren crearlo desde cero, pueden utilizar el que
-propuso [Walmart](https://drive.google.com/file/d/0B6GBtl-gO6LwaVprQkFqTGI2a28/view).
-* Deberán usar al menos un framework de css.
+### Prototipo de baja fidelidad:
+* El diseño fue un consenso, entre las preferencias de los tres miemmbros del equipo:
+![Frame 5](https://user-images.githubusercontent.com/47748753/56271318-d7602a80-60bd-11e9-8ca7-c446c442e17f.png)
+### Prototipo de alta fidelidad:
+Con las ideas iniciales se diseño los siguientes prototipos:
+![Desktop 2](https://user-images.githubusercontent.com/47748753/56271480-345be080-60be-11e9-933d-4fa63c13432a.png)
+![Desktop 1](https://user-images.githubusercontent.com/47748753/56271483-358d0d80-60be-11e9-98f2-c8d61c93dc2c.png)
+ 
+ ### Logo
+ Se pensó en un logo con una frase familiar que haga sentir a la persona en confianza:
+![WhatsApp Image 2019-04-16 at 8 04 57 PM (1)](https://user-images.githubusercontent.com/47748753/56282230-43e62400-60d4-11e9-9167-7d232c73db40.jpeg)
 
-## Reglas de las presentaciones 
 
-* Cada squad tendrá 5 minutos para presentar su demo y 5 minutos para recibir preguntas.
+## Testeos de Usabilidad 
+### Primer testeo de Usabilidad
+A unas 19 personas se le preguntaron por le interfaz, una vez diseñado el prototipo de alta fidelidad y tuvimos las siguientes sugerencias:
 
-* Las personas que presentan en la primera presentación no deben ser las mismas de la presentación final.
+- "Añadir opción de ver las películas de  estrenos."
+- "Ver comentarios de personas."
+- "Que sea una web dinámica."
+- "Que pueda interactuar y sea una web social."
+## Segundo testeo de Usabilidad
+Producto mínimo viable ya diseñado por el equipo FrontEnd:
+![WhatsApp Image 2019-04-16 at 8 18 14 PM](https://user-images.githubusercontent.com/47748753/56271890-1fcc1800-60bf-11e9-8cb1-e088fe92ed07.jpeg)
 
-## Horario
+Luego de tener el primer prodcuto mínimo viable, se entrevistó a 3 coachs del equipo de formación y se tuvieron las siguientes sugerencias:
 
-|       |  Lunes            | Martes                       | Miércoles                     | 
-|------ | ------------------| ---------------------------- | ----------------------------- | 
-| 8:00  | Kick off hackaton | Daily por squad              |   Hackeo                      |      
-| 9:00  | Sesión de planificación  | Hackeo                |   Detalles finales            | 
-| 10:00 | Hackeo            | Compartir link de aplicación | Feria de demostraciones       |
-| 11:00 |                   | Presentación y Feedback      | Presentación de mejores squads|    
-| 12:00 |                   |                              |     Deliberación del jurado   |                                
-|>13:00 |                   |                              |                               |                                
-| 20:00 |                   |                              |                               |                       
+### Tercer testeo de Usabilidad:
+- personalizar el buscador, con una mensaje amigable
+- informar que es tendencia.
+- Me encantó el buscador inicial,  me da la libertad de buscar  lo que yo desee. 
+- Crear una comunidad de comentarios criticos, que comenten porque no verla porque sí verla, algo que solo se encuentra en grupos de facebook  y no en una web.
 
-## Tips para la organización de trabajo entre UX y Front end 
+### Cuarto testeo de Usabilidad:
+- Añadir botón de regresar desde el resumen individual  al  menu de búsqueda con una flecha 
+- ElimiNar barras no funcionales.
+- cursor sobre imágenes, no aparecere la manita que indica que es clickleable.
+- Tiempo extra al momento de búsqueda, la carga toma mucho tiempo.
+- Luego de entrar al resumen personal, el boton home no le mandaba a home
 
-* Las UX y FE entienden en conjunto el reto en el que van a trabajar, se organizan y arman sus primeros bocetos.
-* Con los primeros bocetos/ideas, las FE pasan a crear su ambiente de desarrollo y a crear componentes atómicos que luego les sea fácil personalizar con CSS y utilizar para crear interfaces más complejas. Además, las FE empiezan también a trabajar en la lógica de la aplicación. Mientras tanto, las UX crean una guía de estilos, los flujos de usuarios, hacen un prototipo más completo y lo testean.
-* Las UX comparten el prototipo testeado, para que el equipo empiece a personalizar los componentes y a ponerlos en conjunto.
-* Las UX hacen QA y testing con los releases que vayan haciendo las FE.
-* Planifiquen, historias de usuario y definition of done son importantísimos.
-* Usen las ceremonias ágiles para saber en que van como equipo, dailys y retrospectivas diarias son esenciales.
-* Iteren, iteren, iteren.
+## Organización de Equipo
+Para la organización se la herramienta trello de forma inicial y luego con projects de github
+![image](https://user-images.githubusercontent.com/47748753/56272829-26f42580-60c1-11e9-8d57-dbbf7b119fb9.png)
+Actividades que realizó cada miembro del equipo:
 
-## ¿Qué es la Feria de demos?
+|       |  Kathlen         | Franciree                     | Wendy                         | 
+|------ | -----------------| ----------------------------- | ----------------------------- | 
+| Track | Front  End       | Front  End                    |   UX                          |      
+|First Sprint|Creó el repositorio en GitHub, Desarrolló el MVP, ya testeable y funcional que permitía buscar películas por  nombre, para el primer sprint,| Desarrolló la primera impresión en console log del OMDB y creó el apikey | Diseñó el estudio de los stakeholders(encuesta), creo el diseño de alta fidelidad y testeó la usabilidad del mismo.     
+| Second Sprint |Añadió  las sugerencias del testeo, creó search bar y botones de previous y next, eliminó navbars innecesarios y pulió detalles del diseño web, desarrolló código de impresión de los resultados totales de una búsqueda| Desarrolló el código que permitía avanzar y retorceder la data impresa agrupada de 10 en 10| Testeó la usabilidad del MVP, diseñó el logo de la  website, contribuyó a imprimir los resultados totales de una búsqueda, elaboró el ReadMe|    
+|Principal function| Desarrollo de código| Desarrollo de código | Desarrollo de investigación UX|  
 
-La feria de demos se realizará el día de las presentaciones, consiste en la dinámica de “speed dating”, cada squad presentará su demo durante 3 minutos a un grupo de personas, entre ellos los jurados de la Hackathon. Luego de los 3 minutos sonará una chicharra y el grupo de personas rotará al siguiente squad, de esta forma deberán presentar durante una hora. 
+# Conclusiones
+ En la investigación nos dimos cuenta de existe un mercado que aún no ha sido cubierto, combianar una web con recomendaciones de acuerdo a las preferencias personales y una comunidad de comentarios críticos positivos y negativos, ayudaría a un público desantendido a elegir que ver en un momento de incertidumbre.
+ Nosgustaría llegar a hacer social esta comunidad de comtarios.
 
-* Las demos no deben durar más de 3 minutos y deben mostrar el producto y las tecnologías usadas.
-* Los asistentes van a votar por los 5 equipos finalistas, quienes tendrán la oportunidad de hacer su demo a todo el público para poder elegir un ganador. 
