@@ -8,6 +8,7 @@
 * [Diseño de Interfaz de Usuario](#Diseño-de-Interfaz-de-Usuario)
 * [Testeos de Usabilidad](#Testeos-de-usabilidad)
 * [Organización de Equipo](#Organización-de-equipo)
+* [Conclusiones](#Conclusiones)
 
  ***
 
@@ -92,5 +93,9 @@ Actividades que realizó cada miembro del equipo:
 | Track | Front  End       | Front  End                    |   UX                          |      
 |First Sprint|Creó el repositorio en GitHub, Desarrolló el MVP, ya testeable y funcional que permitía buscar películas por  nombre, para el primer sprint,| Desarrolló la primera impresión en console log del OMDB y creó el apikey | Diseñó el estudio de los stakeholders(encuesta), creo el diseño de alta fidelidad y testeó la usabilidad del mismo.     
 | Second Sprint |Añadió  las sugerencias del testeo, creó search bar y botones de previous y next, eliminó navbars innecesarios y pulió detalles del diseño web, desarrolló código de impresión de los resultados totales de una búsqueda| Desarrolló el código que permitía avanzar y retorceder la data impresa agrupada de 10 en 10| Testeó la usabilidad del MVP, diseñó el logo de la  website, contribuyó a imprimir los resultados totales de una búsqueda, elaboró el ReadMe|    
-|Principal function| Desarrollo de código| Desarrollo de código | Desarrollo de investigación UX|                      
+|Principal function| Desarrollo de código| Desarrollo de código | Desarrollo de investigación UX|  
+
+# Conclusiones
+ En la investigación nos dimos cuenta de existe un mercado que aún no ha sido cubierto, combianar una web con recomendaciones de acuerdo a las preferencias personales y una comunidad de comentarios críticos positivos y negativos, ayudaría a un público desantendido a elegir que ver en un momento de incertidumbre.
+ Nosgustaría llegar a hacer social esta comunidad de comtarios.
 
