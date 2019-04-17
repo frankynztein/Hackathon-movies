@@ -6,7 +6,7 @@
 * [Investigación](#Investigación)
 * [Historias de Usuario](#Historias-de-Usuario)
 * [Diseño de Interfaz de Usuario](#Diseño-de-Interfaz-de-Usuario)
-* [Testeos de Usabilidad](#Testeos-de-usabilidad)
+* [Testeos de Usabilidad](#Testeos-de-usabilidad)git
 * [Organización de Equipo](#Organización-de-equipo)
 * [Conclusiones](#Conclusiones)
 
