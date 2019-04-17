@@ -8,8 +8,8 @@
   <title>YAhoraQuéVer.com</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 </head>
 
 <body>
@@ -183,6 +183,27 @@
     </div>
   </div>
   <div id="info-general" class="container-fluid py-5 hide">
+  </div>
+  <div id="comments-section" class="container hide">
+    <p><i class="em em-relaxed"></i> <strong>Kath</strong> comenta:</p>
+    <p class="font-weight-lighter rounded border border-secondary col-sm-12 col-lg-8 p-2"><em>Me pareció una peli genial.</em></p>
+    <p><i class="em em-heart_eyes"></i> <strong>Wendy</strong> comenta:</p>
+    <p class="font-weight-lighter rounded border border-secondary col-sm-12 col-lg-8 p-2"><em>¡Me gustó!</em></p>
+    <p><i class="em em-face_with_rolling_eyes"></i> <strong>Fran</strong> comenta:</p>
+    <p class="font-weight-lighter rounded border border-secondary col-sm-12 col-lg-8 p-2"><em>No la volvería a ver.</em></p>
+    <div id="show-user-comment"></div>
+    <div class="bg-comment p-5 col-sm-12 col-lg-8">
+      <p>¡Deja tu comentario sobre la película!</p>
+      <div class="form-group">
+        <input id="user-name" class="form-control" type="text" placeholder="Tu nombre">
+      </div>
+      <div class="form-group">
+        <input id="user-comment" class="form-control" type="text" placeholder="Comentario">	
+      </div>
+      <div class="justify-content-end">
+        <button id="send-comment-btn" class="btn btn-dark">Enviar</button>
+      </div>
+    </div>
   </div>
   <footer>
     Una nueva película todos los días.

@@ -51,6 +51,14 @@
     width: 100%;
 }
 
+.bg-comment {
+    background-color: #efefef;
+}
+
+i {
+    display: inline-block;
+}
+
 @media (min-width: 576px) {
     .card-deck .card {
         flex: 30% !important
