@@ -90,7 +90,7 @@ const printMainInfo = (element) => {
       console.log(infoMovies)
       let dataPerMovie = `
         <div class="row">
-          <div class="col">
+          <div class="col text-center">
             <img src=${infoMovies.Poster} alt = "" >
           </div >
           <div class="col">
@@ -121,7 +121,7 @@ btnMarvel.addEventListener('click', (e) => {
 
 btnGot.addEventListener('click', (e) => {
   e.preventDefault();
-  getJson('https://www.omdbapi.com/?s=game-of-thrones&page=${i++}&apikey=c99c4c69');
+  getJson('https://www.omdbapi.com/?s=game-of-thrones&page=${i}&apikey=c99c4c69');
   setTimeout(printCards, 1000);
   moviesCards.classList.remove('hide')
   carouselImgs.classList.add('hide')
@@ -133,7 +133,7 @@ btnGot.addEventListener('click', (e) => {
 
 btnToyStory.addEventListener('click', (e) => {
   e.preventDefault();
-  getJson('https://www.omdbapi.com/?s=toy-story&page=${i++}&apikey=c99c4c69');
+  getJson('https://www.omdbapi.com/?s=toy-story&page=${i}&apikey=c99c4c69');
   setTimeout(printCards, 1000);
   moviesCards.classList.remove('hide')
   carouselImgs.classList.add('hide')
@@ -147,8 +147,15 @@ btnSearchBar.addEventListener('click', searchKeyword)
 searchMovie.addEventListener('click', getSearchValue)
 
 const next = document.getElementById('next')
-next.addEventListener('click', (e) => {
-  e.preventDefault()
-  getJson('https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69');
+const previous = document.getElementById('previous')
+
+const nextPage = () => {
+  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69`);
   setTimeout(printCards, 500);
-})
+}
+const prevPage = () => {
+  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i--}&apikey=c99c4c69`);
+  setTimeout(printCards, 500);
+}
+next.addEventListener('click', nextPage)
+previous.addEventListener('click', prevPage)
