@@ -26,7 +26,6 @@ const searchKeyword = (e) => {
   getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i}&apikey=c99c4c69`);
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
-  carouselImgs.classList.remove('hide')
   infoGeneral.classList.add('hide')
   mainPage.classList.add('hide')
   navBar.classList.remove('hide')
@@ -35,11 +34,9 @@ const searchKeyword = (e) => {
 const movieValue = document.getElementById('movie-name');
 const getSearchValue = (e) => {
   e.preventDefault();
-  movieValue.value = movieKeyword.value
   getJson(`https://www.omdbapi.com/?s=${encodeURI(movieValue.value)}&page=${i + 1}&apikey=c99c4c69`);
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
-  carouselImgs.classList.add('hide')
   infoGeneral.classList.add('hide')
   mainPage.classList.add('hide')
 }
@@ -53,7 +50,7 @@ const printCards = () => {
     console.log(movie)
     let abc = 'assets/no-image.jpeg'
     let xyz = movie.Poster
-    if(xyz === 'N/A'){
+    if (xyz === 'N/A') {
       return xyz = abc
     };
     let string =
@@ -108,35 +105,35 @@ const printMainInfo = (element) => {
 }
 
 btnMarvel.addEventListener('click', (e) => {
-    e.preventDefault();
-    getJson('https://www.omdbapi.com/?s=marvel&page=${i++}&apikey=c99c4c69');
-    setTimeout(printCards, 1000);
-    moviesCards.classList.remove('hide')
-    carouselImgs.classList.add('hide')
-    infoGeneral.classList.add('hide')
-    mainPage.classList.add('hide')
-    navBar.classList.remove('hide')
-
-});
-
-btnGot.addEventListener('click', (e) => {
   e.preventDefault();
-  getJson('https://www.omdbapi.com/?s=game-of-thrones&page=${i}&apikey=c99c4c69');
+  getJson('https://www.omdbapi.com/?s=marvel&page=${i++}&apikey=c99c4c69');
   setTimeout(printCards, 1000);
   moviesCards.classList.remove('hide')
-  carouselImgs.classList.add('hide')
+  carouselImgs.classList.remove('hide')
   infoGeneral.classList.add('hide')
   mainPage.classList.add('hide')
   navBar.classList.remove('hide')
 
 });
+const carouselImgsGot = document.getElementById('carousel-imgs-got')
+btnGot.addEventListener('click', (e) => {
+  e.preventDefault();
+  getJson('https://www.omdbapi.com/?s=game-of-thrones&page=${i}&apikey=c99c4c69');
+  setTimeout(printCards, 1000);
+  moviesCards.classList.remove('hide')
+  carouselImgsGot.classList.remove('hide')
+  infoGeneral.classList.add('hide')
+  mainPage.classList.add('hide')
+  navBar.classList.remove('hide')
+});
+const carouselImgsToy = document.getElementById('carousel-imgs-toy')
 
 btnToyStory.addEventListener('click', (e) => {
   e.preventDefault();
   getJson('https://www.omdbapi.com/?s=toy-story&page=${i}&apikey=c99c4c69');
   setTimeout(printCards, 1000);
   moviesCards.classList.remove('hide')
-  carouselImgs.classList.add('hide')
+  carouselImgs.classList.remove('hide')
   infoGeneral.classList.add('hide')
   mainPage.classList.add('hide')
   navBar.classList.remove('hide')
@@ -150,12 +147,20 @@ const next = document.getElementById('next')
 const previous = document.getElementById('previous')
 
 const nextPage = () => {
-  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69`);
-  setTimeout(printCards, 500);
+  console.log(i)
+    getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69`);
+    setTimeout(printCards, 500)
 }
 const prevPage = () => {
-  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i--}&apikey=c99c4c69`);
-  setTimeout(printCards, 500);
-}
+  console.log(i)
+  if (i > 1) {
+    getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i--}&apikey=c99c4c69`);
+    setTimeout(printCards, 500);
+  }
+};
 next.addEventListener('click', nextPage)
 previous.addEventListener('click', prevPage)
+
+document.getElementById('mini-logo').addEventListener('click', ()=>{
+location.reload();
+})
