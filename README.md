@@ -82,9 +82,27 @@ Luego de tener el primer prodcuto mínimo viable, se entrevistó a 3 coachs del 
 - cursor sobre imágenes, no aparecere la manita que indica que es clickleable.
 - Tiempo extra al momento de búsqueda, la carga toma mucho tiempo.
 - Luego de entrar al resumen personal, el boton home no le mandaba a home
+### Diseño final flujo:
 
+El último interfaz hasta este sprint:
+
+#### PASO 1: 
+La persona llega al interfaz principal con un navegador de búsqueda que le permite explorar a libertad y si no tiene nada en mente lo dirigimos a las tendencias mundiales:
+
+![image](https://user-images.githubusercontent.com/47748753/56283045-3e89d900-60d6-11e9-9fcf-e6ca80dc163d.png)
+
+#### PASO 2:
+Si la persona eligió  usar la palabra clave: "marvel"
+esta será su pantalla de resultados:
+![image](https://user-images.githubusercontent.com/47748753/56283243-bfe16b80-60d6-11e9-8e99-0953fc7a44ca.png)
+
+#### PASO 3:
+
+Llega aun banner desliable y si en la búsqueda elige "Captain Marvel" ver´un resumen del contenido
+con la principal información:
+![image](https://user-images.githubusercontent.com/47748753/56283443-63cb1700-60d7-11e9-9410-c89a1adb40a6.png)
 ## Organización de Equipo
-Para la organización se la herramienta trello de forma inicial y luego con projects de github
+Para la organización se usó la herramienta trello de forma inicial y luego se recurrió a projects de github
 ![image](https://user-images.githubusercontent.com/47748753/56272829-26f42580-60c1-11e9-8d57-dbbf7b119fb9.png)
 Actividades que realizó cada miembro del equipo:
 
