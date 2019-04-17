@@ -29,10 +29,11 @@ const searchKeyword = (e) => {
   navBar.classList.remove('hide')
 }
 
+const movieValue = document.getElementById('movie-name');
+
 const getSearchValue = (e) => {
   e.preventDefault();
-  const movieValue = document.getElementById('movie-name').value;
-  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieValue)}&page=${i + 1}&apikey=c99c4c69`);
+  getJson(`https://www.omdbapi.com/?s=${encodeURI(movieValue.value)}&page=${i + 1}&apikey=c99c4c69`);
   setTimeout(printCards, 500);
   moviesCards.classList.remove('hide')
   carouselImgs.classList.add('hide')
@@ -46,9 +47,15 @@ const printCards = () => {
 
   document.getElementById('output').innerHTML = '';
   arrMovies.forEach((movie) => {
+    console.log(movie)
+    let abc = 'assets/no-image.jpeg'
+    let xyz = movie.Poster
+    if(xyz == 'N/A'){
+      return xyz = abc
+    };
     let string =
       `<div name="movies" id=${movie.imdbID}>
-      <img class="card-img-top" src=${movie.Poster} alt="Card image cap">
+      <img class="card-img-top" src=${xyz} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">${movie.Title}</h5>
         </div>
@@ -104,5 +111,5 @@ const next = document.getElementById('next')
 next.addEventListener('click', (e) => {
   e.preventDefault()
   getJson(`https://www.omdbapi.com/?s=${encodeURI(movieKeyword.value)}&page=${i++}&apikey=c99c4c69`);
-  setTimeout(printCards, 400);
+  setTimeout(printCards, 500);
 })

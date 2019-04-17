@@ -3,13 +3,8 @@
     font-weight: lighter;
 }
 
-nav {
-    /* background: 0 0 !important; */
-    background-color: transparent !important
-}
-
 .container-bg {
-    background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/netflix-background-9.jpg");
+    background-image: url("assets/background.jpg");
 }
 
 .carousel-item img {
