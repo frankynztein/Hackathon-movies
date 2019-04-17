@@ -17,6 +17,8 @@ const btnSearchBar = document.getElementById('btn-search-bar')
 const btnMarvel = document.getElementById('btn-marvel');
 const btnGot = document.getElementById('btn-got');
 const btnToyStory = document.getElementById('btn-toy-story');
+const commmentsSection = document.getElementById('comments-section');
+const sendCommentBtn = document.getElementById('send-comment-btn');
 
 let i = 1
 const movieKeyword = document.getElementById('keyword-value');
@@ -79,6 +81,7 @@ const printMainInfo = (element) => {
   printName.addEventListener('click', () => {
     moviesCards.classList.add('hide');
     carouselImgs.classList.add('hide');
+    commmentsSection.classList.remove('hide');
     infoGeneral.classList.remove('hide');
     infoGeneral.innerHTML = '';
     const atribId = printName.getAttribute('id');
@@ -103,6 +106,15 @@ const printMainInfo = (element) => {
     }, 500)
   })
 }
+
+sendCommentBtn.addEventListener('click', () => {
+	const userName = document.getElementById('user-name').value;
+	const userComment = document.getElementById('user-comment').value;
+	document.getElementById('show-user-comment').innerHTML += `
+    <p><i class="em em-hear_no_evil"></i> <strong>${userName}</strong> comenta:</p>
+		<p class="font-weight-lighter rounded border border-secondary col-sm-12 col-lg-8 p-2"><em>${userComment}</em></p>
+	`; 
+});
 
 btnMarvel.addEventListener('click', (e) => {
   e.preventDefault();
