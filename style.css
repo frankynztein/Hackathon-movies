@@ -20,6 +20,10 @@
 }
 .container-bg {
     background-image: url("assets/background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     overflow: hidden;
 }
 
