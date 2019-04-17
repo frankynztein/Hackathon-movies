@@ -2,7 +2,12 @@
     font-family: 'Oswald', sans-serif;
     font-weight: lighter;
 }
-
+.logo-nombre{
+    font-size: 80px;
+    color: white;
+    position: relative;
+    top:150px;
+}
 .container-bg {
     background-image: url("assets/background.jpg");
 }
