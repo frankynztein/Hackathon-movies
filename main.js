@@ -145,7 +145,7 @@ btnToyStory.addEventListener('click', (e) => {
   getJson('https://www.omdbapi.com/?s=toy-story&page=${i}&apikey=c99c4c69');
   setTimeout(printCards, 1000);
   moviesCards.classList.remove('hide')
-  carouselImgs.classList.remove('hide')
+  carouselImgsToy.classList.remove('hide')
   infoGeneral.classList.add('hide')
   mainPage.classList.add('hide')
   navBar.classList.remove('hide')
