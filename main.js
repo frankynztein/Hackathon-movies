@@ -172,3 +172,10 @@ previous.addEventListener('click', prevPage)
 document.getElementById('mini-logo').addEventListener('click', ()=>{
 location.reload();
 })
+ const pageMovies = document.getElementById('page-movies');
+
+ pageMovies.addEventListener('click', () => {
+  moviesCards.classList.remove('hide');
+  infoGeneral.classList.remove('hide');
+  infoMovies.classList.add('hide');
+ })
