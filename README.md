@@ -1,4 +1,4 @@
-# Hackathon películas: Y ahora que ver.com
+﻿# Hackathon películas: Y ahora que ver.com
 
 ## Índice
 
@@ -6,7 +6,7 @@
 * [Investigación](#Investigación)
 * [Historias de Usuario](#Historias-de-Usuario)
 * [Diseño de Interfaz de Usuario](#Diseño-de-Interfaz-de-Usuario)
-* [Testeos de Usabilidad](#Testeos-de-usabilidad)git
+* [Testeos de Usabilidad](#Testeos-de-usabilidad)
 * [Organización de Equipo](#Organización-de-equipo)
 * [Conclusiones](#Conclusiones)
 
